@@ -13,26 +13,30 @@
 
   <main class="container">
     <div id="declarative-rendering">
-      <h2>1. Declarative Rendering</h2>
+      <h2><a href="https://vuejs.org/v2/guide/index.html#Declarative-Rendering">1. Declarative Rendering</a></h2>
+      <h3>for plugging in a string</h3>
       {{ message }}
     </div>
 
     <div id="directive">
-      <h2>2. Directive</h2>
+      <h2><a href="https://vuejs.org/v2/guide/index.html#Declarative-Rendering">2. Directive</a></h2>
+      <h3>not quite sure when to use this</h3>
       <span v-bind:title="message">
         Hover your mouse over me for a few seconds
         to see my dynamically bound title!
       </span>
-      <!-- QUESTION: Why v-bind and not just title="{{ message }}"? -->
+      <p>QUESTION: Why v-bind and not just <code>title="{{ message }}"</code>?</p>
     </div>
 
     <div id="conditional">
       <h2>3. Conditional</h2>
+      <h3>For displaying something only in some cases</h3>
       <p v-if="seen">Now you see me</p>
     </div>
 
     <div id="loop">
       <h2>4. Loop</h2>
+      <h3>for iterating through an array</h3>
       <ol>
         <li v-for="todo in todos">
           {{ todo.text }}
@@ -43,18 +47,21 @@
 
     <div id="event-listener">
       <h2>5. Event Listener</h2>
+      <h3><code>v-on</code> makes event listeners easier</h3>
       <p>{{ message }}</p>
       <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
 
     <div id="two-way-binding">
       <h2>6. Two-way Binding</h2>
+      <h3>good for forms and other inputs</h3>
       <p>{{ message }}</p>
       <input v-model="message">
     </div>
 
     <div id="components">
       <h2>7. Component</h2>
+      <h3>custom elements! make it modular!</h3>
       <ol>
         <!--
           Now we provide each todo-item with the todo object
